@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* layer utilities is the concept of custom CSS styles within layers,
+allwing the control of precedence of your styles by placing them in a certain order
+relative to Tailwinds base, component and utility layers.
+
+This ensures that the custom utility classes will always override styles from layers with
+lower priority*/
+
+@layer utilities {
+  .CustomWhiteDiv {
+    @apply border 
+      border-r-slate-500 
+      shadow-lg 
+      px-3 
+      rounded-full 
+      text-sm 
+      font-semibold
+      py-1
+      flex
+      items-center;
+  }
+
+  .BtnClass {
+    @apply bg-[rgba(0,0,0,0.9)] 
+        text-white 
+        px-6 
+        py-2 
+        rounded-full 
+        text-base 
+        font-semibold 
+        flex 
+        items-center 
+        gap-1 
+        tracking-normal 
+        cursor-pointer 
+        hover:opacity-90;
+  }
+
+  .LogosClass {
+    @apply w-[40%] sm:w-[20%] lg:w-[10%] h-auto aspect-video object-contain mix-blend-color-burn opacity-70;
+  }
+
+  .ImageClass {
+    @apply w-[40%] md:w-[19.5%] h-auto rounded-[15px] opacity-90 hover:opacity-60 transition-opacity duration-300;
+  }
+}
+
+/* This hides the scrollbar when on mobile */
+::-webkit-scrollbar {
+  width: 0;
+}
