@@ -48,3 +48,7 @@ export default tseslint.config({
   },
 })
 ```
+# How To Run:
+- run `npm i` in the command line.
+- run `npm run dev` to start the development server.
+- run `npm run build` to compile the project.
